@@ -4,10 +4,23 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import store from './store/store';
+import Counter from './Counter';
+import UserData from './UserData';
+import { Provider } from 'react-redux';
+import Connect from './Connect';
+import Counter2 from './Counter2';
+// import Counter3 from './Counter3';
+//3 different method in counter,counter2,counter3,connect
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+    <Counter2 />
+   
+
+    </Provider>
   </React.StrictMode>
 );
 
