@@ -13,8 +13,9 @@ import Counter2 from './Counter2';
 // import Counter3 from './Counter3';
 //3 different method in counter,counter2,counter3,connect
 import ListTutotorial from './ListTutotorial';
-import ErrorBoundary from './ErrorBoundary';
+// import ErrorBoundary from './ErrorBoundary';
 import BuggyCounter from './BuggyCounter';
+import { ErrorBoundary } from "react-error-boundary";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -23,7 +24,8 @@ root.render(
   //   <Counter2 />
   //   </Provider>
   // </React.StrictMode>
-  <ErrorBoundary>  
+  // <ErrorBoundary> 
+  <ErrorBoundary fallback={<div>Something wrong</div>}> 
   <Provider store={store}>
 
         <ListTutotorial/>
